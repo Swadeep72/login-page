@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+ <title>Responsive form Build in HTML CSS and JavaScript</title>
+			<style>
+			*{
+			margin:0px;
+			padding:0px;
+			box-sizing: border-box;
+			}
+			.container{
+			width:100%;
+			height:100vh;
+			background-image: linear-gradient(180deg , lightgreen , skyblue , lightpink);
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			}
+			.form{
+			width:60%;
+			max-height:100%
+			max-width:400px;
+			background-image: linear-gradient(180deg, #a99bf9 , #e3dbf6, #a99bf9);
+			padding:20px; 28px;
+		    border-radius:9px;
+		    }
+		    h1{
+			color: #5851e3;
+			font-size:30px;
+			padding:20px;
+			text-shadow:1px 1px 1px white;
+			}
+			#h2{
+			color: white;
+			font-size:22px;
+			padding:15px;
+			background-image: linear-gradient(180deg ,lightgrey, pink);
+			border-radius:90%;
+			text-shadow:1px 1px 2px black;
+			}
+			input{
+			width:100%;
+			border: none;
+			margin:12px 0px;
+			outline:none;
+			background:#a3a3a331;
+			border-radius:5px;
+			font-size:16px;
+			padding: 18px 16px;
+			}
+			input[type="button"]{
+			color:#ffffff;
+			font-size:25px;
+			background:#5851e3;
+			margin-block:24px;
+			border-radius: 8px;
+			transition:0.5s;
+			cursor: pointer;
+			font-weight:800px;
+			}
+			input[type="button"]:hover{
+			background:#10449a;
+			}
+			a{
+			text-decoration:none;
+			color:grey;
+			font-size :14px;
+			}
+			.signup a{
+			font-weight:800px;
+			font-size :17px;
+			color : #5851e3;
+			}
+			.signup a:hover{
+			text-decoration: underline;
+			color:#10449a;
+			text-underline-offset:3.5px;
+			}
+			#p1,#name{
+			display: none;
+			}
+			@media screen and (max-width : 700 px;){
+				. form {
+				width:100%;
+				}
+			}
+			</style>
+		</head>
+		    <body>
+			<div class="container">
+				<div class="form">
+				<header>
+					<h1 id="h1" align="center">Login Page</h1>
+					<h2 id="h2" align="center">Enter Login Details</h2>
+				</header>
+				<form>
+					<input type="text" id="name" placeholder="Enter Name">
+					<input type="email" placeholder="Enter Email">
+					<input type="password" placeholder="Enter Password">
+					<a id="pass" href="#">Forgot Password?</a>
+ 		 	      <input type="button" value="Login" id="login">
+ 				   <p id="p" class="signup" >Not a member?<a id="signup" href="#">Sign up</a>
+ 				   <p id="p1" class="signup" >Already a user?<a id="slogin" href="#">Login</a>
+				</form>
+				</div>
+			</div>
+			<script>
+				const signup = document.getElementById("signup");
+				const login = document.getElementById("login");
+				const name = document.getElementById("name");
+				const h1 = document.getElementById("h1");
+				const h2 = document.getElementById("h2");
+				const pass = document.getElementById("pass");
+				const p = document.getElementById("p");
+				const p1 = document.getElementById("p1");
+				const slogin = document.getElementById("slogin");
+ 			   signup.onclick = function () {
+					name.style.display="block";
+					login.value="Sign Up";
+					h1.firstChild.data="Signup Page";
+					h2.firstChild.data="Enter Signup Details";
+					
+					pass.style.display="none";
+					p.style.display="none";
+					p1.style.display="block";
+					};
+				/* login.onclick = function () {
+					name.style.display="none";
+					login.value="Login";
+					p.style.display="none";
+					}; */
+				slogin.onclick = function () {
+					name.style.display="none";
+					login.value="Login";
+					p.style.display="block";
+					h1.firstChild.data="Login Page";
+					h2.firstChild.data="Enter Login Details";
+					pass.style.display="block";
+					p1.style.display="none";
+					};
+					
+			</script>
+			</body>
+		</html>
